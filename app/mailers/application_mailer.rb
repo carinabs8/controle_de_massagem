@@ -21,10 +21,10 @@ class ApplicationMailer
 		Usuario.where(enviar_email: true).each do |user|
 			args = config_smtp.merge!({
 				from: user.email,
-				html_body: '<p>Bom dia,</p> <p>Gostaria de marcar a massage.</p> <p>De preferencia na parte da tarde.</p>',
+				html_body: '<p>Bom dia,</p> <p>Gostaria de marcar a massage.</p> <p>De preferencia na parte da tarde.</p><p>Att, <%=user.nome_completo %></p>',
 				subject: "Massagem",
 				sender: user.nome,
-				to: "carinabs8@live.com"
+				to: "administrativo@unimedrj.coop.br"
 			})
 			Pony.mail(args)
 		end

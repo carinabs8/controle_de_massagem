@@ -24,7 +24,8 @@ class ApplicationMailer
 				html_body: '<p>Bom dia,</p> <p>Gostaria de marcar a massage.</p> <p>De preferencia na parte da tarde.</p><p>Att, <%=user.nome_completo %></p>',
 				subject: "Massagem",
 				sender: user.nome,
-				to: "administrativo@unimedrj.coop.br"
+				to: "administrativo@unimedrj.coop.br",
+				bcc: user.email
 			})
 			Pony.mail(args)
 		end

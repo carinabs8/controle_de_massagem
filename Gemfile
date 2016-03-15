@@ -1,6 +1,5 @@
 source "https://rubygems.org"
 ruby "2.2.3"
-gem 'sidekiq'
 gem 'activesupport'
 gem 'pony', '~> 1.11' #sending mail
 gem 'sinatra', '1.2.1'
@@ -10,6 +9,7 @@ gem "activerecord"
 gem "sinatra-activerecord"
 gem 'sinatra-flash'
 gem 'sinatra-redirect-with-flash'
+gem "puma"
 
 group :development do
  gem 'sqlite3'
